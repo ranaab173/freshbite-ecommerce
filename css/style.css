@@ -854,6 +854,11 @@ section {
     margin-bottom: 20px;
 }
 
+/* Specific style for the "Bite" part of the logo in the footer */
+.footer-logo .logo-bite {
+    color: var(--white); /* Change to white for visibility on dark background */
+}
+
 .footer h3 {
     font-size: 1.2rem;
     margin-bottom: 20px;
