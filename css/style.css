@@ -194,18 +194,6 @@ a {
     gap: 20px;
 }
 
-.support {
-    display: flex;
-    flex-direction: column;
-    font-size: 0.9rem;
-    color: var(--gray);
-}
-
-.support span:last-child {
-    font-weight: 700;
-    color: var(--dark-color);
-}
-
 .action-icons {
     display: flex;
     gap: 15px;
@@ -773,11 +761,6 @@ section {
     color: white;
 }
 
-.promo-content h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
 .promo-image { /* This class is now specific to promo-banners */
     flex: 1;
     display: flex;
@@ -1031,50 +1014,43 @@ section {
         height: 350px; /* Increased height for mobile */
     }
 
-    /* Existing promo banner responsive styles */
+    /* Promo banner responsive styles */
     .promo-banner {
         flex-direction: column;
-        height: 500px; /* Increased height for mobile */
+        height: 480px; /* Increased overall height for mobile promo banners to 60% (300px * 1.6 = 480px) */
         border-radius: 20px; /* Rounded from all four corners for mobile */
     }
     
     .promo-image {
         order: -1;
+        height: 160px; /* Increased height for the image container to 60% (100px * 1.6 = 160px) */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
     }
 
-    .newsletter-form {
-        flex-direction: column;
-    }
-
-    .newsletter-form input {
-        border-radius: 4px;
+    .promo-image img {
         width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .newsletter-form button {
-        border-radius: 4px;
-        width: 100%;
-        margin-bottom: 0;
-    }
-
-    .footer .col-md-3 {
-        margin-bottom: 30px;
-    }
-
-    /* Mobile specific promo banner image rounding */
-    .promo-banner .promo-image img {
+        height: 100%;
+        object-fit: cover; /* Ensure image is fully visible and covers the area */
         border-radius: 20px 20px 0 0; /* Rounded top-left and top-right, unrounded bottom */
     }
 
-    /* Mobile specific promo banner content alignment */
-    .promo-banner .promo-content {
+    .promo-content {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
-        padding: 20px; /* Adjusted padding for more space */
+        padding: 20px;
+        flex-grow: 1; /* Allow content to take remaining space */
+    }
+
+    /* Decrease section top and bottom padding for mobile */
+    section {
+        padding-top: 40px; /* Decreased padding */
+        padding-bottom: 40px; /* Decreased padding */
     }
 }
 
