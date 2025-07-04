@@ -916,11 +916,11 @@ section {
 
     .hero-promo-card .hero-promo-content {
         flex: 1;
-        padding-right: 15px;
+        padding-right: 15px; /* Keep this for desktop */
     }
 
     .hero-promo-card .hero-promo-image {
-        flex: 1;
+        flex: 1; /* Allow image container to take space on desktop */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -934,7 +934,7 @@ section {
         max-height: 180px;
         object-fit: contain;
         border-radius: 10px;
-        padding-right: 25px;
+        padding-right: 25px; /* Keep this for desktop */
     }
 
     /* Desktop specific promo banner card and image rounding */
@@ -1012,6 +1012,23 @@ section {
     .hero-promo-card {
         width: 48%;
         height: 350px; /* Increased height for mobile */
+        padding: 20px; /* Reverted to original padding */
+    }
+
+    .hero-promo-card .hero-promo-content {
+        flex: 1; /* Allow content to take available space */
+        padding-right: 15px; /* Reverted to original padding */
+    }
+
+    /* Reverted .hero-promo-card .hero-promo-image to its original state */
+    /* No explicit width/height for the image container, handled by img directly */
+
+    .hero-promo-card .hero-promo-image img {
+        max-width: 180px; /* Reverted to original width */
+        max-height: 180px; /* Reverted to original height */
+        object-fit: contain;
+        border-radius: 10px; /* Keep rounded corners for promo images */
+        padding-right: 25px; /* Reverted to original padding */
     }
 
     /* Promo banner responsive styles */
@@ -1079,7 +1096,23 @@ section {
 
     .hero-promo-card {
         width: 100%;
-        height: 300px; /* Further increased height for smaller mobile devices */
+        height: 300px; /* Reverted to original height */
+        padding: 20px; /* Reverted to original padding */
+    }
+    /* Reverted .hero-promo-card .hero-promo-image to its original state */
+    /* No explicit width for the image container */
+    .hero-promo-card .hero-promo-image img {
+        max-height: 200px; /* Reverted to original max-height */
+    }
+    /* Reverted font size adjustments for h3, discount, link */
+    .hero-promo-card .hero-promo-content h3 {
+        font-size: 1.5rem;
+    }
+    .hero-promo-card .hero-promo-discount {
+        font-size: 1.1rem;
+    }
+    .hero-promo-card .hero-promo-link {
+        font-size: inherit; /* Revert to default or inherited size */
     }
 
     .section-title {
